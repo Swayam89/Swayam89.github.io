@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swayam Jain</title>
+<meta name="description" content="Swayam Jain is a software engineer and athlete who builds products, brand sites and Odinem, the training platform he uses himself.">
+<meta property="og:title" content="Swayam Jain">
+<meta property="og:description" content="Software engineer and athlete. Products, brands, and the training platform I use myself.">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700&family=Geist+Mono:wght@400;500;700&family=Inspiration&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+
+<!-- ===== Loader ===== -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__stage" id="loaderStage">
+    <video class="loader__static" src="assets/static.mp4" muted loop autoplay playsinline></video>
+    <div class="loader__flash" id="loaderFlash"></div>
+    <img class="loader__tv" src="assets/tv-loader.png" alt="">
+    <div class="loader__count mono" id="loaderCount">00%</div>
+  </div>
+</div>
+
+<!-- Fixed film grain over the whole page -->
+<video class="grain" src="assets/static.mp4" muted loop autoplay playsinline aria-hidden="true"></video>
+
+<!-- Cursor label -->
+<div class="cursor-pill mono" id="cursorPill" aria-hidden="true">VIEW LIVE</div>
+
+<!-- ===== Nav ===== -->
+<header class="nav" id="nav">
+  <div class="nav__inner" id="navInner">
+    <a class="logo" href="#hero" aria-label="Swayam Jain, back to top">
+      <span class="logo__top display">SWAYAM</span>
+      <span class="logo__bottom"><span class="display">JA</span><span class="script">IN</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work"><i class="plus"></i><span class="mono">WORK</span></a>
+      <a href="#about"><i class="plus"></i><span class="mono">ABOUT</span></a>
+      <a href="#services"><i class="plus"></i><span class="mono">SERVICES</span></a>
+    </nav>
+    <a class="nav__contact" href="#contact"><span class="mono">CONTACT</span><svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<!-- Phone menu -->
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu__links">
+    <a href="#work"><i class="plus"></i><span class="mono">WORK</span></a>
+    <a href="#about"><i class="plus"></i><span class="mono">ABOUT</span></a>
+    <a href="#services"><i class="plus"></i><span class="mono">SERVICES</span></a>
+    <a href="#contact"><i class="plus"></i><span class="mono">CONTACT</span></a>
+  </nav>
+  <div class="menu__bottom">
+    <a class="mono" href="mailto:swayamisgrat@gmail.com">SWAYAMISGRAT@GMAIL.COM</a>
+    <div class="locale locale--light">
+      <span class="locale__place mono"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor"/><circle cx="8" cy="8" r="2.5" fill="none" stroke="currentColor"/></svg>GUJARAT, IN</span>
+      <span class="locale__time mono" data-clock>--:-- IST</span>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="hero" data-theme="light">
+  <div class="container hero__inner">
+    <div class="hero__heading">
+      <div class="hero__top" data-hero="1"><h1 class="display">SWAYAM</h1></div>
+      <div class="hero__bottom" data-hero="2"><span class="display">JA</span><span class="script">IN</span></div>
+    </div>
+    <div class="hero__bottom-content">
+      <div class="hero__spacer"></div>
+      <div class="tv" id="heroTv">
+        <div class="tv__screen" id="tvScreen">
+          <div class="tv__slides" id="tvSlides">
+            <img src="assets/work-odinem.jpg" alt="" class="is-on">
+            <img src="assets/work-sidepot.jpg" alt="">
+            <img src="assets/work-clearcut.jpg" alt="">
+            <img src="assets/work-abbina.jpg" alt="">
+            <img src="assets/work-abbina-signup.jpg" alt="">
+            <img src="assets/work-framely.jpg" alt="">
+            <img src="assets/work-framely-results.jpg" alt="">
+            <img src="assets/work-framely-scan.jpg" alt="">
+            <img src="assets/work-cher.jpg" alt="">
+            <img src="assets/work-abbina-login.jpg" alt="">
+          </div>
+          <div class="tv__scan"></div>
+          <video class="tv__static" src="assets/static.mp4" muted loop autoplay playsinline></video>
+          <div class="tv__glare"></div>
+          <span class="tv__osd mono" id="tvOsd">CH 01</span>
+        </div>
+        <img class="tv__frame" src="assets/tv-hero.png" alt="">
+      </div>
+      <p class="hero__tagline mono" data-hero="3">
+        <span data-scramble>ENGINEER AND ATHLETE.</span><br>
+        <span data-scramble>I BUILD PRODUCTS, BRANDS,</span><br>
+        <span data-scramble>AND ODINEM, THE PLATFORM I TRAIN WITH.</span>
+      </p>
+    </div>
+    <div class="locale" data-hero="4">
+      <span class="locale__place mono"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor"/><circle cx="8" cy="8" r="2.5" fill="none" stroke="currentColor"/></svg><span data-scramble>GUJARAT</span></span>
+      <span class="locale__time mono" data-clock>--:-- IST</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Intro ===== -->
+<section class="intro" id="intro" data-theme="light">
+  <div class="container intro__inner">
+    <p class="fill display-md intro__fill" data-fill>I BUILD SOFTWARE AND BRANDS FOR PEOPLE WHO NEED BOTH HALVES: THE THING ITSELF, AND THE WAY IT GETS FOUND. CURRENTLY BUILDING ODINEM, A TRAINING PLATFORM, BECAUSE I'M THE ATHLETE IT'S FOR.</p>
+    <div class="tag-row" data-appear><span class="square"></span><span class="mono mono--500" data-scramble>[BASED IN INDIA // WORKING GLOBALLY]</span></div>
+  </div>
+</section>
+
+<!-- ===== Work ===== -->
+<section class="work" id="work" data-theme="light">
+  <div class="container work__inner">
+    <div class="work__deco" data-appear>
+      <div class="work__pattern"><img src="assets/pattern-plus.png" alt=""></div>
+      <p class="mono mono--500" data-scramble>A FEW PROJECTS I'VE WORKED ON RECENTLY.</p>
+    </div>
+
+    <div class="work__heading">
+      <div class="hrow" data-reveal><span class="display">S</span><span class="script">E</span><span class="display">LECTED</span></div>
+      <div class="hrow hrow--pad" data-reveal><span class="display">W</span><span class="script">O</span><span class="display">RKS</span></div>
+    </div>
+
+    <div class="work__grid" id="workGrid" data-view="column">
+      <div class="work__switch mono" role="tablist" aria-label="View">
+        <button class="is-on" data-view-btn="column" role="tab" aria-selected="true">[COLUMN]</button>
+        <button data-view-btn="list" role="tab" aria-selected="false">[LIST]</button>
+      </div>
+      <div class="work__list" id="workList">
+        <a class="work__item is-selected" href="#" data-index="1" data-cursor="COMING SOON" data-live="false">
+          <img class="work__thumb" src="assets/work-odinem.jpg" alt="Odinem training platform">
+          <span class="work__content"><span class="work__num mono">001</span><span class="work__title mono">ODINEM</span></span><span class="work__line"></span>
+        </a>
+        <a class="work__item" href="https://sidepot.sidepot.workers.dev" target="_blank" rel="noopener" data-index="2" data-cursor="VIEW LIVE">
+          <img class="work__thumb" src="assets/work-sidepot.jpg" alt="Sidepot, private poker tables">
+          <span class="work__content"><span class="work__num mono">002</span><span class="work__title mono">SIDEPOT</span></span><span class="work__line"></span>
+        </a>
+        <a class="work__item" href="#" data-index="3" data-cursor="COMING SOON" data-live="false">
+          <img class="work__thumb" src="assets/work-clearcut.jpg" alt="ClearCut browser video editor">
+          <span class="work__content"><span class="work__num mono">003</span><span class="work__title mono">CLEARCUT</span></span><span class="work__line"></span>
+        </a>
+        <a class="work__item" href="#" data-index="4" data-cursor="COMING SOON" data-live="false">
+          <img class="work__thumb" src="assets/work-abbina.jpg" alt="Abbina wardrobe app">
+          <span class="work__content"><span class="work__num mono">004</span><span class="work__title mono">ABBINA</span></span><span class="work__line"></span>
+        </a>
+        <a class="work__item" href="#" data-index="5" data-cursor="COMING SOON" data-live="false">
+          <img class="work__thumb" src="assets/work-framely.jpg" alt="Framely eyewear recommender">
+          <span class="work__content"><span class="work__num mono">005</span><span class="work__title mono">FRAMELY</span></span><span class="work__line"></span>
+        </a>
+        <a class="work__item" href="#" data-index="6" data-cursor="COMING SOON" data-live="false">
+          <img class="work__thumb" src="assets/work-cher.jpg" alt="Cher Hair and Beauty Lounge website">
+          <span class="work__content"><span class="work__num mono">006</span><span class="work__title mono">CHER HAIR &amp; BEAUTY</span></span><span class="work__line"></span>
+        </a>
+      </div>
+      <div class="work__images" id="workImages" aria-hidden="true">
+        <div class="work__img" data-i="6"><img src="assets/work-cher.jpg" alt=""></div>
+        <div class="work__img" data-i="5"><img src="assets/work-framely.jpg" alt=""></div>
+        <div class="work__img" data-i="4"><img src="assets/work-abbina.jpg" alt=""></div>
+        <div class="work__img" data-i="3"><img src="assets/work-clearcut.jpg" alt=""></div>
+        <div class="work__img" data-i="2"><img src="assets/work-sidepot.jpg" alt=""></div>
+        <div class="work__img" data-i="1"><img src="assets/work-odinem.jpg" alt=""></div>
+      </div>
+    </div>
+
+    <div class="cta" data-appear>
+      <p class="mono mono--500" data-scramble>AVAILABLE FOR COLLABORATION</p>
+      <a class="biglink" href="mailto:swayamisgrat@gmail.com" data-cursor="SAY HELLO"><span class="biglink__text">SWAYAMISGRAT@GMAIL.COM</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Approach ===== -->
+<section class="approach" id="approach" data-own="light" data-theme="light">
+  <div class="approach__inner">
+    <div class="approach__head">
+      <div class="hrow" data-reveal><span class="display">APPR</span><span class="script">O</span><span class="display">A</span><span class="script">C</span><span class="display">H</span></div>
+      <h3 class="approach__h3 display-md" data-appear>I CARE ABOUT BUILDING THINGS THAT GET DEPLOYED, GET USED, AND KEEP WORKING.</h3>
+    </div>
+    <div class="approach__cards">
+      <article class="card" data-appear>
+        <div class="card__top"><i></i></div>
+        <div class="card__bottom">
+          <span class="mono" data-scramble>001</span>
+          <div class="card__content"><span class="mono" data-scramble>SHIPPED IS THE ONLY DONE</span><span class="mono card__desc" data-scramble>YOU DON'T UNDERSTAND A THING UNTIL IT'S DEPLOYED AND SOMEONE WHO ISN'T YOU HAS OPENED IT.</span></div>
+        </div>
+      </article>
+      <article class="card" data-appear>
+        <div class="card__top"><i></i><i></i></div>
+        <div class="card__bottom">
+          <span class="mono" data-scramble>002</span>
+          <div class="card__content"><span class="mono" data-scramble>BUILD AND SELL, ONE JOB</span><span class="mono card__desc" data-scramble>THE PRODUCT AND THE WAY IT GETS FOUND ARE THE SAME PROBLEM. I DESIGN FOR DISCOVERY, NOT JUST FOR THE SCREEN.</span></div>
+        </div>
+      </article>
+      <article class="card" data-appear>
+        <div class="card__top"><i></i><i></i><i></i></div>
+        <div class="card__bottom">
+          <span class="mono" data-scramble>003</span>
+          <div class="card__content"><span class="mono" data-scramble>SERVER-SIDE TRUTH</span><span class="mono card__desc" data-scramble>EVERY CARD, CHIP AND HEART-RATE READING LIVES WHERE IT CAN BE CHECKED. CLIENTS SEND INTENTIONS, NOT FACTS.</span></div>
+        </div>
+      </article>
+      <article class="card" data-appear>
+        <div class="card__top"><i></i><i></i><i></i><i></i></div>
+        <div class="card__bottom">
+          <span class="mono" data-scramble>004</span>
+          <div class="card__content"><span class="mono" data-scramble>STEADY OVER FLASHY</span><span class="mono card__desc" data-scramble>TWO YEARS OF UNGLAMOROUS MORNINGS BEAT ONE HEROIC WEEK. I SHIP IN SMALL, FINISHED PIECES.</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="approach__spacer"></div>
+  </div>
+</section>
+
+<!-- ===== Services ===== -->
+<section class="services" id="services" data-own="dark" data-theme="light">
+  <div class="container services__inner">
+    <div class="services__deco" data-appear>
+      <img class="services__circle" src="assets/deco-circle.svg" alt="">
+      <img class="services__ruler" src="assets/deco-ruler.svg" alt="">
+    </div>
+    <div class="services__heading">
+      <div class="hrow" data-reveal><span class="display">S</span><span class="script">E</span><span class="display">RVICE</span><span class="script">S</span></div>
+      <span class="mono mono--500 services__tag" data-scramble>[HOW I HELP]</span>
+    </div>
+    <div class="services__text"><h3 class="services__h3 display-md" data-appear>I TAKE ON A SMALL NUMBER OF PROJECTS AT A TIME.</h3></div>
+    <div class="services__text"><h3 class="services__h3 display-md" data-appear>MOSTLY PRODUCTS AND BRAND SITES THAT NEED TO WORK, BE FOUND, AND KEEP WORKING AFTER LAUNCH.</h3></div>
+    <div class="services__rows" data-appear>
+      <span class="rule"></span>
+      <div class="srow"><span class="mono srow__num" data-scramble>001</span><div class="srow__content"><span class="mono srow__title" data-scramble>PRODUCT ENGINEERING</span><span class="mono srow__desc">FULL PRODUCTS FROM IDEA TO PRODUCTION: AUTH, DATA, INTEGRATIONS, DEPLOYS. NEXT.JS, CLOUDFLARE WORKERS, SQLITE, WHATEVER THE JOB NEEDS.</span></div></div>
+      <span class="rule"></span>
+      <div class="srow"><span class="mono srow__num" data-scramble>002</span><div class="srow__content"><span class="mono srow__title" data-scramble>WEBSITES &amp; BRAND</span><span class="mono srow__desc">FAST, HAND-BUILT SITES FOR BUSINESSES AND STUDIOS. MOTION WHERE IT EARNS ITS PLACE, RESTRAINT EVERYWHERE ELSE.</span></div></div>
+      <span class="rule"></span>
+      <div class="srow"><span class="mono srow__num" data-scramble>003</span><div class="srow__content"><span class="mono srow__title" data-scramble>LOCAL SEO &amp; DISCOVERY</span><span class="mono srow__desc">PER-LOCATION PAGES, SITEMAPS AND STRUCTURED DATA. BUILT SO THE NEAREST BRANCH IS THE ONE PEOPLE FIND.</span></div></div>
+      <span class="rule"></span>
+      <div class="srow"><span class="mono srow__num" data-scramble>004</span><div class="srow__content"><span class="mono srow__title" data-scramble>REALTIME &amp; INTEGRATIONS</span><span class="mono srow__desc">SERVER-AUTHORITATIVE GAME LOGIC, WEBSOCKETS, AND THIRD-PARTY DATA (STRAVA, WHOOP, APPLE HEALTH) RECONCILED INTO ONE ANSWER.</span></div></div>
+      <span class="rule"></span>
+    </div>
+    <div class="cta" data-appear>
+      <p class="mono mono--500" data-scramble>HAVE A PROJECT?</p>
+      <a class="biglink" href="#contact" data-cursor="LET'S TALK"><span class="biglink__text">LET'S CHAT</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="about" id="about" data-own="light" data-theme="dark">
+  <div class="container about__inner">
+    <div class="hrow hrow--center" data-reveal><span class="display">A</span><span class="script">BOU</span><span class="display">T</span></div>
+    <div class="about__content">
+      <div class="about__intro" data-appear>
+        <span class="mono mono--500" data-scramble>-- {"HELLO WORLD"}</span>
+        <div class="about__name"><span class="about__im">I'M</span><span class="about__nm">SWAYAM JAIN</span></div>
+      </div>
+      <div class="about__photo" data-appear>
+        <canvas id="portrait" aria-label="Portrait of Swayam Jain" role="img"></canvas>
+        <img id="portraitSrc" src="assets/portrait.svg" alt="" hidden>
+      </div>
+      <div class="about__spacer"></div>
+    </div>
+    <div class="about__fillwrap"><p class="fill display-md about__fill" data-fill>I'M A SOFTWARE ENGINEER WORKING ACROSS PRODUCT, BRAND AND SYSTEMS. I ALSO RUN, AND I BUILD THE TOOLS I TRAIN WITH.</p></div>
+    <div class="about__row">
+      <div class="about__col" data-appear>
+        <span class="tag-arrow mono mono--500"><span data-scramble>[PHILOSOPHY]</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 6v6H6" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+        <h3 class="display-md about__h3">I LEARNED TO BUILD BY MAKING THINGS NOBODY ASKED FOR. SMALL, USELESS, FINISHED.</h3>
+      </div>
+    </div>
+    <div class="about__row">
+      <div class="about__col" data-appear>
+        <h3 class="display-md about__h3">MY WORK SITS BETWEEN ENGINEERING AND BUSINESS &mdash; WHERE BUILDING THE THING AND SELLING IT WERE NEVER TWO JOBS.</h3>
+      </div>
+    </div>
+    <div class="about__logos" data-appear>
+      <div class="logos__top">
+        <span class="logo-mark logo-mark--serif">Cher</span>
+        <span class="logo-mark logo-mark--caps">HOUSE OF AFFLUENCE</span>
+        <span class="logo-mark logo-mark--wide">ATE<em>studio</em></span>
+        <span class="logo-mark logo-mark--mono">ODINEM</span>
+        <span class="logo-mark logo-mark--serif">Sidepot</span>
+        <span class="logo-mark logo-mark--bold">ClearCut</span>
+      </div>
+      <div class="logos__bottom"><span class="tag mono" data-scramble>CLIENTS &amp; PRODUCTS [6]</span><span class="rule rule--flex"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="contact" id="contact" data-own="dark" data-theme="light">
+  <div class="container contact__inner">
+    <div class="contact__heading">
+      <span class="mono mono--500 contact__tag" data-scramble>[LET'S TALK]</span>
+      <div class="contact__lines">
+        <div class="hrow hrow--center hrow--gap16" data-reveal><span class="hword"><span class="display">G</span><span class="script">OO</span><span class="display">D</span></span><span class="display">PRODUCT</span></div>
+        <div class="hrow hrow--center hrow--gap24" data-reveal><span class="display">STARTS</span><span class="display">WITH</span></div>
+        <div class="hrow hrow--center hrow--gap16" data-reveal><span class="display">GOOD</span><span class="hword"><span class="display">COLLA</span><span class="script">BO</span></span><span class="hword"><span class="display">RATI</span><span class="script">ON</span></span></div>
+      </div>
+    </div>
+    <form class="form" id="contactForm" data-appear novalidate>
+      <label class="field"><span class="mono mono--500" data-scramble>NAME*</span><input class="mono" type="text" name="name" placeholder="JOHN DOE" autocomplete="name" required></label>
+      <label class="field"><span class="mono mono--500" data-scramble>EMAIL*</span><input class="mono" type="email" name="email" placeholder="EXAMPLE@EMAIL.COM" autocomplete="email" required></label>
+      <label class="field"><span class="mono mono--500" data-scramble>WHAT ARE YOU BUILDING?*</span><textarea class="mono" name="project" rows="3" placeholder="DESCRIBE YOUR PROJECT IN A FEW WORDS" required></textarea></label>
+      <div class="field field--budget">
+        <span class="mono mono--500" data-scramble>BUDGET (USD)*</span>
+        <div class="budget" role="radiogroup" aria-label="Budget">
+          <button type="button" class="mono" data-budget="LESS THAN $5K" role="radio" aria-checked="false">LESS THAN $5K</button>
+          <button type="button" class="mono" data-budget="5K-10K" role="radio" aria-checked="false">5K-10K</button>
+          <button type="button" class="mono" data-budget="+10K" role="radio" aria-checked="false">+10K</button>
+        </div>
+        <input type="hidden" name="budget" value="">
+      </div>
+      <div class="form__submit"><button type="submit" class="biglink biglink--btn" data-cursor="SEND IT"><span class="biglink__text">START CONVERSATION</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
+      <p class="form__note mono" id="formNote" hidden></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="footer" id="footer">
+  <video class="footer__grain" src="assets/static.mp4" muted loop autoplay playsinline aria-hidden="true"></video>
+  <div class="footer__inner">
+    <div class="footer__top">
+      <p class="footer__title">PROOF OF WORK</p>
+      <div class="ticker" id="ticker">
+        <div class="ticker__track">
+          <div class="trow"><div class="trow__who mono"><span>ODINEM</span><span class="role">LIVE PRODUCT</span></div><p class="trow__text mono">CONNECTS STRAVA, WHOOP AND APPLE HEALTH, RECONCILES READINGS THAT DISAGREE, AND RETURNS ONE SHORT ANSWER EACH MORNING.</p></div>
+          <div class="trow"><div class="trow__who mono"><span>SIDEPOT</span><span class="role">LIVE ON CLOUDFLARE</span></div><p class="trow__text mono">SERVER-AUTHORITATIVE POKER AND TEEN PATTI FOR FRIENDS. NOBODY'S BROWSER EVER SEES ANOTHER PLAYER'S CARDS.</p></div>
+          <div class="trow"><div class="trow__who mono"><span>CHER HAIR &amp; BEAUTY</span><span class="role">CLIENT, 3 BRANCHES</span></div><p class="trow__text mono">PER-LOCATION PAGES AND SEO PLUMBING SO A SEARCH FOR THE NEAREST BRANCH LANDS ON THE RIGHT ONE.</p></div>
+          <div class="trow"><div class="trow__who mono"><span>ODINEM</span><span class="role">LIVE PRODUCT</span></div><p class="trow__text mono">CONNECTS STRAVA, WHOOP AND APPLE HEALTH, RECONCILES READINGS THAT DISAGREE, AND RETURNS ONE SHORT ANSWER EACH MORNING.</p></div>
+          <div class="trow"><div class="trow__who mono"><span>SIDEPOT</span><span class="role">LIVE ON CLOUDFLARE</span></div><p class="trow__text mono">SERVER-AUTHORITATIVE POKER AND TEEN PATTI FOR FRIENDS. NOBODY'S BROWSER EVER SEES ANOTHER PLAYER'S CARDS.</p></div>
+          <div class="trow"><div class="trow__who mono"><span>CHER HAIR &amp; BEAUTY</span><span class="role">CLIENT, 3 BRANCHES</span></div><p class="trow__text mono">PER-LOCATION PAGES AND SEO PLUMBING SO A SEARCH FOR THE NEAREST BRANCH LANDS ON THE RIGHT ONE.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__middle">
+      <span class="rule"></span>
+      <nav class="footer__links" aria-label="Social">
+        <a href="https://github.com/Swayam89" target="_blank" rel="noopener"><i class="plus"></i><span class="mono">GITHUB</span></a>
+        <a href="https://x.com/" target="_blank" rel="noopener" data-todo="x handle"><i class="plus"></i><span class="mono">X/TWITTER</span></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" data-todo="linkedin url"><i class="plus"></i><span class="mono">LINKEDIN</span></a>
+        <a href="mailto:swayamisgrat@gmail.com"><i class="plus"></i><span class="mono">EMAIL</span></a>
+      </nav>
+      <span class="rule"></span>
+    </div>
+    <div class="footer__bottom">
+      <div class="locale locale--light">
+        <span class="locale__place mono"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor"/><circle cx="8" cy="8" r="2.5" fill="none" stroke="currentColor"/></svg>GUJARAT</span>
+        <span class="locale__time mono" data-clock>--:-- IST</span>
+      </div>
+      <span class="footer__year mono">&copy;2026</span>
+    </div>
+  </div>
+  <img class="footer__tv" src="assets/tv-footer.png" alt="" aria-hidden="true">
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
