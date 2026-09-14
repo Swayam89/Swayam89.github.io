@@ -11,7 +11,13 @@ python3 -m http.server 8090
 ```
 
 Open http://localhost:8090. (Open it through a server, not `file://`, so the videos and fonts load.)
-To publish, upload the folder as-is to any static host (Cloudflare Pages, Netlify, GitHub Pages, Vercel).
+
+## Live site
+
+Hosted on GitHub Pages at https://swayam89.github.io/ from the repository
+`Swayam89/Swayam89.github.io` (branch `main`, root folder). To update the live site, commit
+the changed files to that repository (git push, or Add file > Upload files on github.com);
+Pages redeploys within a minute.
 
 ## What is in here
 
